@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.Data.SqlClient
+Public Class Form1
+
     Private Sub TestdbDataSetBindingSource_CurrentChanged(sender As Object, e As EventArgs)
 
     End Sub
