@@ -39,6 +39,10 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnRegister = New System.Windows.Forms.Button()
         Me.btnShowAll = New System.Windows.Forms.Button()
+        Me.btnFirst = New System.Windows.Forms.Button()
+        Me.btnPrevious = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
+        Me.btnLast = New System.Windows.Forms.Button()
         CType(Me.userView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ResuserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TestdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,10 +53,10 @@ Partial Class Form1
         'userView
         '
         Me.userView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.userView.Location = New System.Drawing.Point(21, 109)
+        Me.userView.Location = New System.Drawing.Point(21, 156)
         Me.userView.Name = "userView"
         Me.userView.RowTemplate.Height = 24
-        Me.userView.Size = New System.Drawing.Size(973, 236)
+        Me.userView.Size = New System.Drawing.Size(973, 303)
         Me.userView.TabIndex = 0
         '
         'ResuserBindingSource
@@ -166,11 +170,51 @@ Partial Class Form1
         Me.btnShowAll.Text = "Show All"
         Me.btnShowAll.UseVisualStyleBackColor = True
         '
+        'btnFirst
+        '
+        Me.btnFirst.Location = New System.Drawing.Point(21, 108)
+        Me.btnFirst.Name = "btnFirst"
+        Me.btnFirst.Size = New System.Drawing.Size(55, 42)
+        Me.btnFirst.TabIndex = 12
+        Me.btnFirst.Text = "|<"
+        Me.btnFirst.UseVisualStyleBackColor = True
+        '
+        'btnPrevious
+        '
+        Me.btnPrevious.Location = New System.Drawing.Point(92, 108)
+        Me.btnPrevious.Name = "btnPrevious"
+        Me.btnPrevious.Size = New System.Drawing.Size(55, 42)
+        Me.btnPrevious.TabIndex = 13
+        Me.btnPrevious.Text = "<<"
+        Me.btnPrevious.UseVisualStyleBackColor = True
+        '
+        'btnNext
+        '
+        Me.btnNext.Location = New System.Drawing.Point(168, 108)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(55, 42)
+        Me.btnNext.TabIndex = 14
+        Me.btnNext.Text = ">>"
+        Me.btnNext.UseVisualStyleBackColor = True
+        '
+        'btnLast
+        '
+        Me.btnLast.Location = New System.Drawing.Point(243, 108)
+        Me.btnLast.Name = "btnLast"
+        Me.btnLast.Size = New System.Drawing.Size(55, 42)
+        Me.btnLast.TabIndex = 15
+        Me.btnLast.Text = ">|"
+        Me.btnLast.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1009, 374)
+        Me.ClientSize = New System.Drawing.Size(1013, 471)
+        Me.Controls.Add(Me.btnLast)
+        Me.Controls.Add(Me.btnNext)
+        Me.Controls.Add(Me.btnPrevious)
+        Me.Controls.Add(Me.btnFirst)
         Me.Controls.Add(Me.btnShowAll)
         Me.Controls.Add(Me.btnRegister)
         Me.Controls.Add(Me.Label4)
@@ -210,4 +254,8 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents btnRegister As Button
     Friend WithEvents btnShowAll As Button
+    Friend WithEvents btnFirst As Button
+    Friend WithEvents btnPrevious As Button
+    Friend WithEvents btnNext As Button
+    Friend WithEvents btnLast As Button
 End Class

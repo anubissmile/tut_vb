@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class Form1
     Dim connection As New SqlConnection("Server = WESARUTKHM; Database = testdb; Integrated Security = true")
+    Dim index As Integer
     Private Sub TestdbDataSetBindingSource_CurrentChanged(sender As Object, e As EventArgs)
 
     End Sub
@@ -37,7 +38,16 @@ Public Class Form1
         Dim adapter As New SqlDataAdapter(command)
         Dim table As New DataTable()
         adapter.Fill(table)
-
         userView.DataSource = table
+    End Sub
+
+    Private Sub userView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles userView.CellContentClick
+        index = e.RowIndex
+        MessageBox.Show(index)
+        Dim selectedRow As DataGridViewRow
+        selectedRow = userView.Rows(index)
+        txtName.Text = selectedRow.Cells(0).Value.ToString()
+        txtLastname.Text = selectedRow.Cells(1).Value.ToString()
+        txtAge.Text = selectedRow.Cells(2).Value.ToString()
     End Sub
 End Class
