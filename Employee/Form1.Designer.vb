@@ -24,30 +24,30 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TestdbDataSet = New Employee.testdbDataSet()
-        Me.TestdbDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ResuserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Res_userTableAdapter = New Employee.testdbDataSetTableAdapters.res_userTableAdapter()
-        Me.TestdbDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LastnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AgeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BirthdateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CreateddateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.ResuserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TestdbDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TestdbDataSet = New Employee.testdbDataSet()
+        Me.Res_userTableAdapter = New Employee.testdbDataSetTableAdapters.res_userTableAdapter()
+        Me.TestdbDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.txtAge = New System.Windows.Forms.TextBox()
+        Me.txtLastname = New System.Windows.Forms.TextBox()
+        Me.txtBirth = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnRegister = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TestdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TestdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ResuserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TestdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TestdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TestdbDataSetBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -62,30 +62,6 @@ Partial Class Form1
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(973, 236)
         Me.DataGridView1.TabIndex = 0
-        '
-        'TestdbDataSet
-        '
-        Me.TestdbDataSet.DataSetName = "testdbDataSet"
-        Me.TestdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TestdbDataSetBindingSource
-        '
-        Me.TestdbDataSetBindingSource.DataSource = Me.TestdbDataSet
-        Me.TestdbDataSetBindingSource.Position = 0
-        '
-        'ResuserBindingSource
-        '
-        Me.ResuserBindingSource.DataMember = "res_user"
-        Me.ResuserBindingSource.DataSource = Me.TestdbDataSetBindingSource
-        '
-        'Res_userTableAdapter
-        '
-        Me.Res_userTableAdapter.ClearBeforeFill = True
-        '
-        'TestdbDataSetBindingSource1
-        '
-        Me.TestdbDataSetBindingSource1.DataSource = Me.TestdbDataSet
-        Me.TestdbDataSetBindingSource1.Position = 0
         '
         'IdDataGridViewTextBoxColumn
         '
@@ -124,34 +100,58 @@ Partial Class Form1
         Me.CreateddateDataGridViewTextBoxColumn.HeaderText = "created_date"
         Me.CreateddateDataGridViewTextBoxColumn.Name = "CreateddateDataGridViewTextBoxColumn"
         '
-        'TextBox1
+        'ResuserBindingSource
         '
-        Me.TextBox1.Location = New System.Drawing.Point(128, 23)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(184, 22)
-        Me.TextBox1.TabIndex = 1
+        Me.ResuserBindingSource.DataMember = "res_user"
+        Me.ResuserBindingSource.DataSource = Me.TestdbDataSetBindingSource
         '
-        'TextBox2
+        'TestdbDataSetBindingSource
         '
-        Me.TextBox2.Location = New System.Drawing.Point(128, 68)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(184, 22)
-        Me.TextBox2.TabIndex = 2
+        Me.TestdbDataSetBindingSource.DataSource = Me.TestdbDataSet
+        Me.TestdbDataSetBindingSource.Position = 0
         '
-        'TextBox3
+        'TestdbDataSet
         '
-        Me.TextBox3.Location = New System.Drawing.Point(453, 22)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(184, 22)
-        Me.TextBox3.TabIndex = 3
+        Me.TestdbDataSet.DataSetName = "testdbDataSet"
+        Me.TestdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'DateTimePicker1
+        'Res_userTableAdapter
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(453, 67)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 22)
-        Me.DateTimePicker1.TabIndex = 5
+        Me.Res_userTableAdapter.ClearBeforeFill = True
+        '
+        'TestdbDataSetBindingSource1
+        '
+        Me.TestdbDataSetBindingSource1.DataSource = Me.TestdbDataSet
+        Me.TestdbDataSetBindingSource1.Position = 0
+        '
+        'txtName
+        '
+        Me.txtName.Location = New System.Drawing.Point(128, 23)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(184, 22)
+        Me.txtName.TabIndex = 1
+        '
+        'txtAge
+        '
+        Me.txtAge.Location = New System.Drawing.Point(128, 68)
+        Me.txtAge.Name = "txtAge"
+        Me.txtAge.Size = New System.Drawing.Size(184, 22)
+        Me.txtAge.TabIndex = 2
+        '
+        'txtLastname
+        '
+        Me.txtLastname.Location = New System.Drawing.Point(453, 22)
+        Me.txtLastname.Name = "txtLastname"
+        Me.txtLastname.Size = New System.Drawing.Size(184, 22)
+        Me.txtLastname.TabIndex = 3
+        '
+        'txtBirth
+        '
+        Me.txtBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.txtBirth.Location = New System.Drawing.Point(453, 67)
+        Me.txtBirth.Name = "txtBirth"
+        Me.txtBirth.Size = New System.Drawing.Size(200, 22)
+        Me.txtBirth.TabIndex = 5
         '
         'Label1
         '
@@ -193,36 +193,36 @@ Partial Class Form1
         Me.Label4.Text = "Birth Date : "
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'Button1
+        'btnRegister
         '
-        Me.Button1.Location = New System.Drawing.Point(765, 39)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(139, 45)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Register"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnRegister.Location = New System.Drawing.Point(765, 39)
+        Me.btnRegister.Name = "btnRegister"
+        Me.btnRegister.Size = New System.Drawing.Size(139, 45)
+        Me.btnRegister.TabIndex = 10
+        Me.btnRegister.Text = "Register"
+        Me.btnRegister.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(997, 366)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnRegister)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtBirth)
+        Me.Controls.Add(Me.txtLastname)
+        Me.Controls.Add(Me.txtAge)
+        Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TestdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TestdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ResuserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TestdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TestdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TestdbDataSetBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -241,13 +241,13 @@ Partial Class Form1
     Friend WithEvents BirthdateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CreateddateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TestdbDataSetBindingSource1 As BindingSource
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents txtName As TextBox
+    Friend WithEvents txtAge As TextBox
+    Friend WithEvents txtLastname As TextBox
+    Friend WithEvents txtBirth As DateTimePicker
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnRegister As Button
 End Class
